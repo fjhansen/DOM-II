@@ -15,5 +15,24 @@ document.querySelectorAll(".img-content").forEach( el => {
     })
 })
 
+// Change nav background on click
+
+let navBackground = document.querySelector(".main-navigation")
+
+navBackground.addEventListener("click", () => {
+    navBackground.style.backgroundColor = "rgba(224, 106, 106, 0.5)";
+    navBackground.style.color = "black";
+    navBackground.style.fontWeight = "bolder";
+    navBackground.style.borderBottom = "3px dashed rgba(224, 106, 106, 0.52)"
+   
+})
+
+// Change nav styles to default on double click 
+
+navBackground.addEventListener("dblclick", () => {
+    navBackground.style = "initial";
+})
+
+
 
 
