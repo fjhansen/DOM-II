@@ -1,12 +1,19 @@
 // Mouse Events
 
-const imgContent = document.querySelector(".img-content");
+// hover image
 
-imgContent.addEventListener("mouseenter", () => {
-    imgContent.style.transform = "scale(1.2)";
-    imgContent.style.transition = "transform 0.3s"
+document.querySelectorAll(".img-content").forEach( el => {
+    el.addEventListener("mouseenter", () => {
+        el.style.transform = "scale(1.2)";
+        el.style.transition = "transform 0.3s";
+    })
 })
 
-imgContent.addEventListener("mouseleave", () => {
-    imgContent.style.transform = "scale(1)";
+document.querySelectorAll(".img-content").forEach( el => {
+    el.addEventListener("mouseleave", () => {
+        el.style.transform = "scale(1)";
+    })
 })
+
+
+
