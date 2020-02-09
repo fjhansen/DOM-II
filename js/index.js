@@ -4,26 +4,33 @@
 
 document.querySelectorAll(".img-content").forEach( el => {
     el.addEventListener("mouseenter", () => {
+       
         el.style.transform = "scale(1.2)";
-        el.style.transition = "transform 0.3s";
-    })
+        el.style.transition = "transform 0.3s"; 
+        
+    
+
 })
 
 document.querySelectorAll(".img-content").forEach( el => {
     el.addEventListener("mouseleave", () => {
         el.style.transform = "scale(1)";
+        event.stopPropagation();
+        
     })
 })
 
-// Change nav background on click
+// Change nav background on click + Stop Propagation
 
 let navBackground = document.querySelector(".main-navigation")
 
 navBackground.addEventListener("click", () => {
+    event.stopPropagation();
     navBackground.style.backgroundColor = "rgba(224, 106, 106, 0.5)";
     navBackground.style.color = "black";
     navBackground.style.fontWeight = "bolder";
     navBackground.style.borderBottom = "3px dashed rgba(224, 106, 106, 0.52)"
+    
    
 })
 
@@ -46,6 +53,8 @@ navTitle.addEventListener("dblclick", () => {
     document.body.style.cursor = "initial";
     
 })
+
+
 
 
 
