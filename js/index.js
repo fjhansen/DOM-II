@@ -10,6 +10,7 @@ document.querySelectorAll(".img-content").forEach( el => {
         
     
 
+    })
 })
 
 document.querySelectorAll(".img-content").forEach( el => {
@@ -55,7 +56,28 @@ navTitle.addEventListener("dblclick", () => {
 })
 
 
+// Stop Propogation
+
+const body = document.querySelector('body');
+
+body.addEventListener("click", () => {
+    
+    
+    body.style.backgroundColor = "papayawhip";
+    
+})
 
 
+// Prevent Default
+
+let navLink = document.querySelectorAll('.nav-link');
 
 
+navLink.forEach(link => {
+link.addEventListener('click', (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    event.target.style.color = "darkcyan";
+})
+
+})
