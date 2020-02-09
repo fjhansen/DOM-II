@@ -350,3 +350,6 @@ img {
   background: #FFFFFF;
   color: #17A2B8;
 }
+.custom {
+  cursor: url(https://i.imgur.com/G9YBAA6.png), auto;
+}

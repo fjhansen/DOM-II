@@ -33,6 +33,20 @@ navBackground.addEventListener("dblclick", () => {
     navBackground.style = "initial";
 })
 
+// Fun Bus Cursor Easter Egg
+
+let navTitle = document.getElementsByTagName('img')[0]
+
+navTitle.addEventListener("click", () => {
+    document.body.style.cursor = "url(https://i.imgur.com/G9YBAA6.png), auto";
+    
+})
+
+navTitle.addEventListener("dblclick", () => {
+    document.body.style.cursor = "initial";
+    
+})
+
 
 
 
