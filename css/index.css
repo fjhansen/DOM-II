@@ -353,3 +353,10 @@ img {
 .custom {
   cursor: url(https://i.imgur.com/G9YBAA6.png), auto;
 }
+:root {
+  --color-dark: #111111;
+  --color-light: #72725d;
+  --color-dark-accent: #ccc8a9;
+  --background: var(--color-dark);
+  --color: var(--color-light);
+}

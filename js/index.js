@@ -28,7 +28,7 @@ let navBackground = document.querySelector(".main-navigation")
 navBackground.addEventListener("click", () => {
     event.stopPropagation();
     navBackground.style.backgroundColor = "rgba(224, 106, 106, 0.5)";
-    navBackground.style.color = "black";
+    
     navBackground.style.fontWeight = "bolder";
     navBackground.style.borderBottom = "3px dashed rgba(224, 106, 106, 0.52)"
     
@@ -60,12 +60,6 @@ navTitle.addEventListener("dblclick", () => {
 
 const body = document.querySelector('body');
 
-body.addEventListener("click", () => {
-    
-    
-    body.style.backgroundColor = "papayawhip";
-    
-})
 
 
 // Prevent Default
@@ -81,3 +75,32 @@ link.addEventListener('click', (event) => {
 })
 
 })
+
+const footerBg = document.querySelector('footer');
+
+// Create Dark Mode Button
+
+var button = document.createElement("button");
+button.innerHTML = "Dark Mode";
+button.style.backgroundColor = "black";
+button.style.color = "white"
+
+// Append Dark Mode Button
+
+let navPre = document.getElementsByTagName('nav')[0];
+
+navPre.append(button)
+
+button.addEventListener('click', () => {
+    event.stopPropagation();
+    document.body.style.backgroundColor = "var(--color-dark)";
+    document.body.style.color = "var(--color-light)";
+    navBackground.style.backgroundColor = "var(--color-dark-accent)";
+   document.body.h2.style.color = "yellow";
+  
+    footerBg.style.backgroundColor = "var(--color-dark-accent)";
+
+
+})
+
+
