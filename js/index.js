@@ -103,4 +103,15 @@ button.addEventListener('click', () => {
 
 })
 
+// Change Header + Footer Color on Resize
+
+window.addEventListener('resize', () => {
+    event.stopPropagation();
+    
+    document.body.style.backgroundColor = "lavender";
+    navBackground.style.backgroundColor = "blueviolet";
+    footerBg.style.backgroundColor = "blueviolet";
+    document.body.style.color = "indigo";
+})
+
 
